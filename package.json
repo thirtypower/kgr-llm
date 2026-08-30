@@ -1,0 +1,17 @@
+{
+  "name": "kgr-llm",
+  "version": "1.0.0",
+  "private": true,
+  "description": "気軽にはじめる LLM 自作入門（Zenn の本 / GitHub 連携）",
+  "author": "thirtypower",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "preview": "zenn preview",
+    "new:article": "zenn new:article",
+    "new:book": "zenn new:book",
+    "list": "zenn list:books && zenn list:articles"
+  },
+  "dependencies": {
+    "zenn-cli": "^0.5.3"
+  }
+}

@@ -1,0 +1,24 @@
+title: "気軽にはじめる LLM 自作入門"
+summary: "必要な前提知識は Python だけ。数学も PyTorch も深層学習も、この本の中でゼロから説明します。読むだけで終わらせず、Transformer・トークナイザ・LLaMA2 を自分で実装して、最後は 215M パラメータのモデルを実際に学習させるところまで行きます。コア教材は全部 CPU で数分以内に終わるので、GPU は要りません。本編8章＋補講5本＋付録3本、全章に実行可能なコードつき。"
+topics: ["llm", "機械学習", "pytorch", "transformer", "python"]
+published: false
+price: 0
+chapters:
+  - 00-overview
+  - 005-deep-learning-basics
+  - 01-nlp-basics
+  - 02-transformer-attention
+  - 025-transformer-block
+  - 026-tokenizer
+  - 027-mini-gpt
+  - 03-pretrained-models
+  - 04-what-is-llm
+  - 05-build-your-own-llm
+  - 055-moe-modern-arch
+  - 06-training-pipeline
+  - 07-applications
+  - 075-fast-inference
+  - 08-reinforcement-learning
+  - appendix-glossary
+  - appendix-references
+  - appendix-setup

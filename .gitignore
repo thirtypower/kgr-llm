@@ -1,0 +1,65 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# 仮想環境
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ===== code/ のスクリプトが生成する成果物 =====
+# いずれも実行すれば再生成できるので、リポジトリには含めない。
+
+# 04_minigpt.py
+code/minigpt.pt
+
+# 03_bpe_tokenizer.py / 06_pretrain.py（トークナイザ）
+code/tokenizer.json
+code/tokenizer_demo.json
+code/my_tokenizer/
+
+# 06_pretrain.py（コーパスと重み）
+code/corpus.jsonl
+code/corpus_demo.jsonl
+code/pretrain.pth
+code/pretrain_demo.pth
+
+# 07_lora_sft.py（LoRA アダプタと Trainer の出力）
+code/lora_adapter/
+code/sft_out/
+
+# 上記から漏れたモデル重み・チェックポイント全般
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+*.gguf
+
+# Hugging Face / datasets のキャッシュをリポジトリ内に置いた場合
+.cache/
+hf_cache/
+
+# ===== Zenn CLI =====
+node_modules/
+
+# ===== エディタ・ツール =====
+.claude/
+.vscode/
+.idea/
+*.swp
+*~
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
