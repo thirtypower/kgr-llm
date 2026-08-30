@@ -310,7 +310,7 @@ pip install transformers datasets tokenizers accelerate peft trl
 | 版 | 何をしたか |
 |----|-----------|
 | 初版 | 本編（第1〜8章）＋補講 00.5 / 02.6 / 02.7 の執筆、全コードの実行検証 |
-| 第2版 | 初心者レビュー34件への対応（[初心者レビューメモ.md](初心者レビューメモ.md)） |
+| 第2版 | 初心者レビュー34件への対応 |
 | **第3版（2026-08）** | **①** 一次資料に照らして誤りだった記述の訂正（[参考文献 の一覧](books/kgr-llm-guide/appendix-references.md#この教材で明示的に訂正した主張)）／**②** 2026年時点の実物とのギャップを埋める補講 **05.5**（MoE・MLA・長文化）と **07.5**（推論の最適化）を追加、対応コード `08_moe.py` `09_inference.py` も新規作成／**③** [参考文献](books/kgr-llm-guide/appendix-references.md) を新設 |
 
 > ⚠️ **この教材も必ず古くなります。**
@@ -341,7 +341,6 @@ pip install transformers datasets tokenizers accelerate peft trl
 kgr-llm/
 ├─ README.md                      ← このファイル（GitHub 側の入口）
 ├─ LICENSE                        ← CC BY-SA 4.0
-├─ 初心者レビューメモ.md            ← 制作記録。本には含めない
 ├─ code/                          ← 実行可能スクリプト（Zenn は無視）
 │   ├─ 01_tensor_autograd.py 〜 09_inference.py
 │   └─ _bpe.py / _console.py / _corpus.py
