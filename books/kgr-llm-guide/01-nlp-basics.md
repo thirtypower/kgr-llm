@@ -153,7 +153,7 @@ LLM 時代の大きな変化は、**これら全部を1つのモデルが会話�
 
 → **BPE を自分でゼロから実装する**手順は [02.6章](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/026-tokenizer) で扱います。
 　（「なぜ未知語が消えるのか」「なぜ日本語は英語よりトークン消費が多いのか」もそこで説明します）
-→ ライブラリを使った実務的な訓練手順は [05章](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/05-build-your-own-llm) です。
+→ ライブラリを使った実務的な訓練手順は [05章（後編）5.2](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/05-2-pretrain-your-llm) です。
 
 ### 1.3.3 品詞タグ付け（POS Tagging）
 

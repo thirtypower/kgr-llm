@@ -212,7 +212,7 @@ title: "参考文献・出典（一次資料へのリンク集）"
 | 「QLoRA は 4bit だから速い」 | **速くならない。** メモリを削るための技術で、bf16 に戻す処理が挟まるぶん **bf16 の LoRA より遅い** | [06章 6.3.4](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/06-training-pipeline) |
 | 「創発は規模がある閾値を超えると必ず起きる」 | **測り方に依存する。** 完全一致のような不連続な指標は、なだらかな改善を崖に見せる（Schaeffer et al.） | [04章 4.1.2](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/04-what-is-llm)（2指標の比較図） |
 | 「マスク付き Attention はカンニング防止のため」 | 正しいが**それだけではない**。本質は **1回の forward で全位置ぶんの学習をする**ためで、これが無いと事前学習の計算量が T 倍になる | [02章 2.1.7](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/02-transformer-attention) |
-| 「勾配累積は大きいバッチと完全に等価」 | **応答の長さがバラバラだと等価にならない**（micro-batch ごとに平均すると短い応答が過大評価される）。2024年に Hugging Face 側で修正された | [05章 5.3.3](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/05-build-your-own-llm) |
+| 「勾配累積は大きいバッチと完全に等価」 | **応答の長さがバラバラだと等価にならない**（micro-batch ごとに平均すると短い応答が過大評価される）。2024年に Hugging Face 側で修正された | [05章（後編）5.3.3](https://zenn.dev/thirtypower/books/kgr-llm-guide/viewer/05-2-pretrain-your-llm) |
 
 > 🔑 **共通する教訓**：この表の項目はほとんどが
 > **「何を最小化した結論なのか」「何が減って何が減らないのか」を落とした要約**から生まれています。

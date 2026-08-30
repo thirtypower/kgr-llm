@@ -101,7 +101,8 @@ flowchart TD
 | 🔰02.7 | [02.7. ミニ GPT を作る](books/kgr-llm-guide/027-mini-gpt.md) | **GPT-2 を自作して学習させる**。実装バグの潰し方6項目 | ★★☆ | 💻 `04_` |
 | 03 | [03. 事前学習言語モデル](books/kgr-llm-guide/03-pretrained-models.md) | BERT・T5・GPT・LLaMA の違い | ★★☆ | |
 | 04 | [04. 大規模言語モデルとは](books/kgr-llm-guide/04-what-is-llm.md) | 創発能力・In-Context Learning・Pretrain/SFT/RLHF | ★★☆ | |
-| 05 | [05. 自分で LLM を作る](books/kgr-llm-guide/05-build-your-own-llm.md) | LLaMA2 の実装、トークナイザ訓練、215M モデルの事前学習 | ★★★ | 💻 `05_` `06_` |
+| 05 | [05. 自分で LLM を作る（前編）](books/kgr-llm-guide/05-build-your-own-llm.md) | **LLaMA2 の実装**。RMSNorm / RoPE / GQA / SwiGLU をゼロから書く | ★★★ | 💻 `05_` |
+| 05 | [05. 自分で LLM を作る（後編）](books/kgr-llm-guide/05-2-pretrain-your-llm.md) | **トークナイザ訓練と事前学習**。215M モデルを実際に学習させ、生成させる | ★★★ | 💻 `06_` |
 | 🔰05.5 | [05.5. MoE と現代アーキテクチャ](books/kgr-llm-guide/055-moe-modern-arch.md) | **2026年の標準形との差分**。MoE / MLA / 長文化（YaRN）/ 希薄な Attention | ★★★ | 💻 `08_` |
 | 06 | [06. 学習フローの実践](books/kgr-llm-guide/06-training-pipeline.md) | Transformers / DeepSpeed / LoRA / QLoRA / DPO | ★★★ | 💻 `07_` |
 | 07 | [07. LLM の応用](books/kgr-llm-guide/07-applications.md) | 評価ベンチマーク・RAG・Agent | ★★☆ | |
@@ -138,7 +139,7 @@ python 09_inference.py --quant      # KVキャッシュ・バッチ・量子化�
 | `03_bpe_tokenizer.py` | Byte-Level BPE の訓練を1マージずつ観察 | **標準ライブラリのみ** | [02.6章](books/kgr-llm-guide/026-tokenizer.md) |
 | `04_minigpt.py` | GPT-2 相当を自作 → 自己検査6項目 → 学習 → 生成 → 文法採点 | torch | [02.7章](books/kgr-llm-guide/027-mini-gpt.md) |
 | `05_llama.py` | RMSNorm / RoPE / GQA / SwiGLU への置き換えを数値で検証 | torch | [05章](books/kgr-llm-guide/05-build-your-own-llm.md) |
-| `06_pretrain.py` | **データ準備→トークナイザ訓練→事前学習→保存→生成**の完全パイプライン。`--demo` は CPU 約3分、`--full` は wikipedia-ja で 215M を学習（要 GPU 12GB〜） | torch（`--full` は +datasets/tokenizers） | [05章](books/kgr-llm-guide/05-build-your-own-llm.md) |
+| `06_pretrain.py` | **データ準備→トークナイザ訓練→事前学習→保存→生成**の完全パイプライン。`--demo` は CPU 約3分、`--full` は wikipedia-ja で 215M を学習（要 GPU 12GB〜） | torch（`--full` は +datasets/tokenizers） | [05章（後編）](books/kgr-llm-guide/05-2-pretrain-your-llm.md) |
 | `07_lora_sft.py` | Qwen2.5-0.5B を日本語データで **LoRA 微調整**。学習前後の応答を比較 | transformers / peft 等（VRAM 6GB〜 or Colab T4） | [06章](books/kgr-llm-guide/06-training-pipeline.md) |
 | `08_moe.py` | **MoE を自作**。総/活性パラメータの数え上げ、ルータの top-k、**補助損失なしで専門家が遊ぶ様子**、MHA/GQA/MQA/MLA のキャッシュ量 | torch | [05.5章](books/kgr-llm-guide/055-moe-modern-arch.md) |
 | `09_inference.py` | **推論の実測**。KVキャッシュの一致検証と効果、文脈長ごとの1トークン単価、バッチのスループット、量子化の崖 | torch | [07.5章](books/kgr-llm-guide/075-fast-inference.md) |
