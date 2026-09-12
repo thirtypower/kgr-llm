@@ -1,5 +1,5 @@
 ---
-title: "「Transformer の記事を読んでも自分では作れない」を終わらせる無料教材を書いた（全18章・前提は Python の文法だけ）"
+title: "知識ゼロから LLM を自作する無料教材を書いた（全18章・前提は Python の文法だけ）"
 emoji: "🔰"
 type: "tech"
 topics: ["llm", "生成ai", "pytorch", "python", "機械学習"]
